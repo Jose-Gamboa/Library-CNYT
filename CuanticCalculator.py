@@ -58,7 +58,7 @@ def div_complex(c1, c2):
 
 def mod_complex(c):
     """
-    It takes a complex number as input and returns its modulus
+    It takes a complex number than input and returns its modulus
 
     :param c: a complex number
     :return: The modulus of the complex number.
@@ -74,8 +74,8 @@ def conjugation_complex(c):
     :param c: a complex number in the form of a list, where c[0] is the real part and c[1] is the imaginary part
     :return: The conjugate of the complex number.
     """
-    c[1] = c[1]*-1
-    return [c[0], c[1]]
+    con_complex = [c[0], c[1]*-1]
+    return con_complex
 
 
 def polar_representation_convert(cartesian_repre):
@@ -111,21 +111,3 @@ def phase_complex_number(comp):
     """
     phase = math.degrees(math.atan(comp[1]/comp[0]))
     return phase
-
-
-def main():
-    # print(sum_complex([3, -1], [1, 4]))
-    # print(product_complex([-3, -1], [1, -2]))
-    # print(sub_complex([3, -4], [1, -2]))
-    # print(div_complex([0, 3], [-1, -1]))
-    # print(mod_complex([4, 3]))
-    # print(conjugation_complex([4, -2]))
-    # print(conjugation_complex([27, 5]))
-    # print(polar_representation_convert([1, 1]))
-    # print(cartesian_representation_convert([3, math.pi/3]))
-    # print(phase_complex_number([1, 1]))
-    print(mod_complex([1/(2**(1/2)), -7/(2**(1/2))])**2)
-
-
-if __name__ == '__main__':
-    main()
